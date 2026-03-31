@@ -1,12 +1,12 @@
-﻿# Personal Website (Static Version)
+﻿# Personal Site (Static)
 
-This is a lightweight personal website starter with:
+当前版本为精简单页站点，仅保留两块内容：
 
-- Home / About / Projects / Blog / Contact pages
-- Two sample blog posts
-- Responsive layout + small motion effects
-- Basic SEO files: `robots.txt`, `sitemap.xml`, Open Graph metadata
-- Zero build dependencies, can run as plain static files
+- 个人介绍
+- 项目经历
+- 响应式布局与基础动效
+- 基础 SEO 文件：`robots.txt`、`sitemap.xml`、Open Graph
+- 无构建依赖，可直接以静态文件部署
 
 ## Local Preview
 
@@ -21,13 +21,9 @@ Then open `http://localhost:8080`.
 
 ## Customize Before Deploy
 
-1. Replace `hello@your-domain.com` in `contact.html`.
-2. Site URL is currently configured as `https://effass7-art.github.io` in:
-   - `index.html`, `about.html`, `projects.html`, `blog.html`, `contact.html`
-   - `posts/*.html`
-   - `robots.txt`
-   - `sitemap.xml`
-3. Update site owner name and project/blog content.
+1. 如需修改站点地址，更新 `index.html`、`robots.txt`、`sitemap.xml` 中的域名。
+2. 根据需要调整 `index.html` 中“个人介绍”和“项目经历”的文案。
+3. 旧页面（about/projects/blog/contact/posts）当前会自动跳转到首页。
 
 ## Suggested Deployment
 
@@ -36,5 +32,3 @@ Upload the folder to any static host:
 - Vercel
 - Netlify
 - GitHub Pages
-
-

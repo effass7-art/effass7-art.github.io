@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   const nav = document.querySelector("[data-nav]");
   const toggle = document.querySelector("[data-menu-toggle]");
   const currentPage = document.body.getAttribute("data-page");
@@ -57,19 +57,13 @@
 
       if (!name || !email || !message) {
         if (status) {
-          status.textContent = "请先填写姓名、邮箱和正文。";
+          status.textContent = "Please fill in name, email, and message.";
         }
         return;
       }
 
-      const finalSubject = subject || "来自个人网站的新消息";
-      const body = [
-        "姓名: " + name,
-        "邮箱: " + email,
-        "",
-        "留言内容:",
-        message
-      ].join("\n");
+      const finalSubject = subject || "New message from personal website";
+      const body = ["Name: " + name, "Email: " + email, "", "Message:", message].join("\n");
 
       const url =
         "mailto:" +
@@ -81,7 +75,7 @@
 
       window.location.href = url;
       if (status) {
-        status.textContent = "已为你打开邮箱客户端，请确认并发送。";
+        status.textContent = "Email client opened. Please review and send.";
       }
     });
   }
@@ -95,11 +89,11 @@
       try {
         await navigator.clipboard.writeText(email);
         if (status) {
-          status.textContent = "邮箱地址已复制到剪贴板。";
+          status.textContent = "Email address copied.";
         }
       } catch (_) {
         if (status) {
-          status.textContent = "复制失败，请手动复制邮箱。";
+          status.textContent = "Copy failed. Please copy manually.";
         }
       }
     });
