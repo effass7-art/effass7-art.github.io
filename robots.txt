@@ -1,0 +1,6 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://effass7-art.github.io/sitemap.xml
+
+

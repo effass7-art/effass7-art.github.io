@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8f4e7"/>
+      <stop offset="100%" stop-color="#e7f4ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <circle cx="1010" cy="140" r="120" fill="#0e6f65" opacity="0.17"/>
+  <circle cx="180" cy="530" r="140" fill="#d97a2b" opacity="0.16"/>
+  <text x="90" y="248" font-size="74" font-family="Georgia, serif" fill="#1f2329">Renha</text>
+  <text x="90" y="320" font-size="40" font-family="'Trebuchet MS', sans-serif" fill="#2f343b">Personal Portfolio &amp; Blog</text>
+  <rect x="90" y="368" width="364" height="6" fill="#0e6f65"/>
+</svg>
