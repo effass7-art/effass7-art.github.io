@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>项目详情 | Renha</title>
+    <meta
+      name="description"
+      content="项目详情页：包含结构化项目说明、大纲目录和项目介绍视频模块。"
+    />
+    <meta property="og:title" content="项目详情 | Renha" />
+    <meta
+      property="og:description"
+      content="查看项目背景、方案、结果，并可添加项目介绍视频。"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="assets/og-card.svg" />
+    <link rel="canonical" href="https://effass7-art.github.io/project.html" />
+    <link rel="icon" href="assets/og-card.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body data-page="project">
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="brand" href="index.html" aria-label="返回首页">
+          <strong>RENHA LAB NOTES</strong>
+          <span>Project Detail</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-label="切换菜单"
+          aria-expanded="false"
+        >
+          菜单
+        </button>
+        <nav class="site-nav" data-nav>
+          <ul>
+            <li><a href="index.html#profile">个人介绍</a></li>
+            <li><a href="index.html#projects">项目经历</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container detail-head reveal" data-delay="0s">
+        <a class="back-link" href="index.html#projects">← 返回项目列表</a>
+        <p class="section-tag">PROJECT DETAIL</p>
+        <h1 data-project-title>项目标题</h1>
+        <p class="detail-summary" data-project-summary>项目简介</p>
+        <ul class="detail-meta" data-project-meta></ul>
+      </div>
+
+      <div class="container detail-shell">
+        <aside class="outline-card reveal" data-delay="0.05s">
+          <h2>内容大纲</h2>
+          <nav>
+            <ul data-project-outline></ul>
+          </nav>
+        </aside>
+
+        <article class="detail-content" data-project-content></article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Copyright <span data-year></span> Renha.</p>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

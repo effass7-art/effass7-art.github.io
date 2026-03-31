@@ -1,33 +1,37 @@
 ﻿# Personal Site (Static)
 
-当前版本为精简单页站点，仅保留两块内容：
+当前版本聚焦科研风个人站，核心能力：
 
-- 个人介绍
-- 项目经历
-- 响应式布局与基础动效
-- 基础 SEO 文件：`robots.txt`、`sitemap.xml`、Open Graph
-- 无构建依赖，可直接以静态文件部署
+- 首页仅保留两大主块：个人介绍、项目经历
+- 白色主调 + 黑色辅助的严谨视觉风格
+- 项目列表自动渲染（标题 + 简介）
+- 点击项目卡片进入详情页 `project.html?id=...`
+- 项目详情页包含侧边大纲目录（滚动高亮）
+- 项目详情页支持添加介绍视频链接（本地浏览器保存）
 
 ## Local Preview
-
-Use Python (if installed):
 
 ```bash
 cd personal-site
 python -m http.server 8080
 ```
 
-Then open `http://localhost:8080`.
+访问 `http://localhost:8080`
 
-## Customize Before Deploy
+## Content Customize
 
-1. 如需修改站点地址，更新 `index.html`、`robots.txt`、`sitemap.xml` 中的域名。
-2. 根据需要调整 `index.html` 中“个人介绍”和“项目经历”的文案。
-3. 旧页面（about/projects/blog/contact/posts）当前会自动跳转到首页。
+1. 个人介绍内容在 `index.html` 内直接修改（姓名、学校、专业、研究方向、邮箱）。
+2. 个人形象图默认文件是 `assets/profile-placeholder.svg`，可直接替换为你的照片文件。
+3. 项目数据集中在 `scripts/main.js` 的 `PROJECTS` 数组中：
+   - `id`：项目标识（用于详情页链接）
+   - `title` / `summary`：首页展示
+   - `sections`：详情页正文与目录
+   - `videoUrl`：项目默认视频链接（可留空）
+4. 详情页的“保存视频”会把链接写入 `localStorage`，仅在当前浏览器生效。
 
 ## Suggested Deployment
 
-Upload the folder to any static host:
+上传整个目录到任意静态托管即可：
 
 - Vercel
 - Netlify

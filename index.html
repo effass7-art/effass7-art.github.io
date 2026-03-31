@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Renha | 个人介绍与项目经历</title>
+    <title>Renha | 科研型个人站</title>
     <meta
       name="description"
-      content="Renha 的个人网站，仅保留个人介绍与项目经历两块核心内容。"
+      content="白色主调、黑色辅助的科研风个人站，聚焦个人介绍与项目经历。"
     />
-    <meta property="og:title" content="Renha | 个人介绍与项目经历" />
+    <meta property="og:title" content="Renha | 科研型个人站" />
     <meta
       property="og:description"
-      content="聚焦个人介绍与项目经历的简洁个人站点。"
+      content="包含个人介绍与项目经历，支持进入项目详情与视频展示。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/og-card.svg" />
@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Spectral:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/main.css" />
@@ -29,8 +29,8 @@
     <header class="site-header">
       <div class="container site-header-inner">
         <a class="brand" href="index.html" aria-label="返回首页">
-          <strong>Renha</strong>
-          <span>个人网站</span>
+          <strong>RENHA LAB NOTES</strong>
+          <span>Personal Research Portfolio</span>
         </a>
         <button
           class="menu-toggle"
@@ -39,11 +39,11 @@
           aria-label="切换菜单"
           aria-expanded="false"
         >
-          +
+          菜单
         </button>
         <nav class="site-nav" data-nav>
           <ul>
-            <li><a href="#intro">个人介绍</a></li>
+            <li><a href="#profile">个人介绍</a></li>
             <li><a href="#projects">项目经历</a></li>
           </ul>
         </nav>
@@ -51,80 +51,60 @@
     </header>
 
     <main>
-      <section id="intro" class="hero">
-        <div class="container hero-panel">
-          <div class="reveal">
-            <p class="eyebrow">个人介绍</p>
-            <h1>你好，我是 Renha。</h1>
+      <section id="profile" class="section profile-section">
+        <div class="container profile-layout reveal" data-delay="0s">
+          <figure class="portrait-card">
+            <img src="assets/profile-placeholder.svg" alt="个人形象图占位" />
+            <figcaption>
+              在 `assets/profile-placeholder.svg` 位置替换为你的个人形象图。
+            </figcaption>
+          </figure>
+
+          <article class="profile-card">
+            <p class="section-tag">PERSONAL PROFILE</p>
+            <h1>Renha</h1>
             <p class="lead">
-              我主要关注产品落地与前端工程实践，擅长把模糊需求拆解成可执行方案，
-              并以可维护、可迭代的方式快速交付。
+              我关注前端工程与产品落地方法，偏好通过结构化分析将复杂需求拆解为可执行模块，
+              并以迭代验证保障交付质量。
             </p>
-            <p>
-              目前我持续打磨个人品牌站点与项目表达方式，希望通过更清晰的案例展示，
-              让协作方快速理解我的工作方法和实际贡献。
-            </p>
-          </div>
-          <aside class="hero-card reveal">
-            <dl>
-              <dt>当前关注</dt>
-              <dd>Web 产品落地与前端体验优化</dd>
-              <dt>核心能力</dt>
-              <dd>需求拆解、页面实现、迭代交付</dd>
-              <dt>工作方式</dt>
-              <dd>先上线可用版本，再持续优化质量</dd>
+            <dl class="profile-meta">
+              <div>
+                <dt>学校</dt>
+                <dd>XX 大学</dd>
+              </div>
+              <div>
+                <dt>专业</dt>
+                <dd>计算机科学与技术</dd>
+              </div>
+              <div>
+                <dt>研究方向</dt>
+                <dd>人机交互 / 前端工程化 / 可视化表达</dd>
+              </div>
+              <div>
+                <dt>联系邮箱</dt>
+                <dd>renha@example.com</dd>
+              </div>
             </dl>
-          </aside>
+          </article>
         </div>
       </section>
 
-      <section id="projects" class="section">
+      <section id="projects" class="section projects-section">
         <div class="container">
-          <div class="section-head reveal">
+          <div class="section-head reveal" data-delay="0.05s">
+            <p class="section-tag">PROJECT EXPERIENCE</p>
             <h2>项目经历</h2>
-            <p>以下是我近阶段有代表性的三个项目方向。</p>
+            <p>
+              项目列表展示标题与简介，点击卡片进入详情页。详情页包含结构化大纲目录，支持为项目添加介绍视频。
+            </p>
           </div>
-
-          <div class="grid grid-3 project-list">
-            <article class="card reveal">
-              <h3>个人站点重构</h3>
-              <p>
-                从信息结构、视觉规范到部署链路完整重做，目标是提升内容更新效率和访问稳定性。
-              </p>
-              <div class="chip-row">
-                <span class="chip">Static Site</span>
-                <span class="chip">SEO</span>
-              </div>
-            </article>
-
-            <article class="card reveal">
-              <h3>项目案例表达体系</h3>
-              <p>
-                建立统一的案例叙事框架，围绕背景、角色、决策、结果四个维度组织项目内容。
-              </p>
-              <div class="chip-row">
-                <span class="chip">Case Study</span>
-                <span class="chip">Writing</span>
-              </div>
-            </article>
-
-            <article class="card reveal">
-              <h3>前端样式系统整理</h3>
-              <p>
-                抽离通用样式与组件规范，减少页面风格偏差，降低后续维护成本。
-              </p>
-              <div class="chip-row">
-                <span class="chip">CSS</span>
-                <span class="chip">Design Tokens</span>
-              </div>
-            </article>
-          </div>
+          <div class="project-grid" data-project-list></div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
+      <div class="container footer-inner">
         <p>Copyright <span data-year></span> Renha.</p>
       </div>
     </footer>
