@@ -1,113 +1,124 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Renha | 科研型个人站</title>
+    <title>任哈主页</title>
     <meta
       name="description"
-      content="白色主调、黑色辅助的科研风个人站，聚焦个人介绍与项目经历。"
+      content="一个以阅读为主的个人主页，包含左侧目录与长文内容。"
     />
-    <meta property="og:title" content="Renha | 科研型个人站" />
+    <meta property="og:title" content="ren主页" />
     <meta
       property="og:description"
-      content="包含个人介绍与项目经历，支持进入项目详情与视频展示。"
+      content="简介、备忘、研究与非正式教学分享。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/og-card.svg" />
-    <link rel="canonical" href="https://effass7-art.github.io/" />
     <link rel="icon" href="assets/og-card.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles/main.css" />
   </head>
-  <body data-page="home">
-    <header class="site-header">
-      <div class="container site-header-inner">
-        <a class="brand" href="index.html" aria-label="返回首页">
-          <strong>RENHA LAB NOTES</strong>
-          <span>Personal Research Portfolio</span>
+  <body>
+    <div id="content">
+      <nav id="nav-top" role="navigation" aria-label="顶部导航">
+        <a role="button" href="#" data-toggle="wy-nav-top" aria-label="切换菜单">
+          <span class="menu-icon">&#9776;</span>
         </a>
-        <button
-          class="menu-toggle"
-          type="button"
-          data-menu-toggle
-          aria-label="切换菜单"
-          aria-expanded="false"
-        >
-          菜单
-        </button>
-        <nav class="site-nav" data-nav>
-          <ul>
-            <li><a href="#profile">个人介绍</a></li>
-            <li><a href="#projects">项目经历</a></li>
+      </nav>
+
+      <h1 class="title">任浩林个人主页</h1>
+
+      <div id="sidebar">
+        <h2><a href="#content">任浩林个人主页</a></h2>
+        <div id="toc">
+          <ul class="nav">
+            <li><a href="#intro">简介</a></li>
+            <li><a href="#memos">项目工程</a></li>
+            <li><a href="#manuscripts">学习</a></li>
+            <li><a href="#informal">非正式内容</a></li>
           </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section id="profile" class="section profile-section">
-        <div class="container profile-layout reveal" data-delay="0s">
-          <figure class="portrait-card">
-            <img src="assets/profile-placeholder.svg" alt="个人形象图占位" />
-            <figcaption>
-              在 `assets/profile-placeholder.svg` 位置替换为你的个人形象图。
-            </figcaption>
-          </figure>
-
-          <article class="profile-card">
-            <p class="section-tag">PERSONAL PROFILE</p>
-            <h1>Renha</h1>
-            <p class="lead">
-              我关注前端工程与产品落地方法，偏好通过结构化分析将复杂需求拆解为可执行模块，
-              并以迭代验证保障交付质量。
-            </p>
-            <dl class="profile-meta">
-              <div>
-                <dt>学校</dt>
-                <dd>XX 大学</dd>
-              </div>
-              <div>
-                <dt>专业</dt>
-                <dd>计算机科学与技术</dd>
-              </div>
-              <div>
-                <dt>研究方向</dt>
-                <dd>人机交互 / 前端工程化 / 可视化表达</dd>
-              </div>
-              <div>
-                <dt>联系邮箱</dt>
-                <dd>renha@example.com</dd>
-              </div>
-            </dl>
-          </article>
         </div>
-      </section>
-
-      <section id="projects" class="section projects-section">
-        <div class="container">
-          <div class="section-head reveal" data-delay="0.05s">
-            <p class="section-tag">PROJECT EXPERIENCE</p>
-            <h2>项目经历</h2>
-            <p>
-              项目列表展示标题与简介，点击卡片进入详情页。详情页包含结构化大纲目录，支持为项目添加介绍视频。
-            </p>
-          </div>
-          <div class="project-grid" data-project-list></div>
+        <div class="sidebar-ink" aria-hidden="true"></div>
+        <div id="postamble" class="status">
+          <p class="author">
+            <span class="meta-icon">&#9993;</span>
+            <a href="mailto:renha@example.com">effass7@gmail.com</a>
+          </p>
+          <p class="date">
+            <span class="meta-icon">&#9719;</span> 最近更新：
+            <span data-year></span>
+          </p>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>Copyright <span data-year></span> Renha.</p>
       </div>
-    </footer>
+
+      <div id="main">
+        <blockquote>
+          “对于想要探索的人来说，不应把自己局限在科学的某一个章节里。”
+          <footer>J. 阿达马</footer>
+        </blockquote>
+
+        <section id="intro" class="section">
+          <h2>简介</h2>
+          <p>
+            我是一名智慧能源工程专业学生，关注电力电子和人工智能。
+          </p>
+            个人能力
+          <ul>
+            <li>电力电子拓扑</li>
+            <li>数字电源闭环设计</li>
+            <li>神经网络</li>
+            <li>技术沟通</li>
+          </ul>
+          <p>
+            你也可以查看<a href="assets/og-card.svg">我的简历（占位）</a>以及下方栏目。
+          </p>
+        </section>
+
+        <section id="memos" class="section">
+          <h2>项目工程</h2>
+          <p>
+            这个部分用于整理日常学习和实验中使用的简明笔记与工具。
+          </p>
+          <ul>
+            <li><a href="https://osf.io/" target="_blank" rel="noopener noreferrer">开放科学框架（OSF）</a></li>
+            <li><a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">arXiv 预印本</a></li>
+            <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub 代码笔记</a></li>
+          </ul>
+          <blockquote>
+            “今天写清楚一条笔记，明天少走十小时弯路。”
+          </blockquote>
+        </section>
+
+        <section id="manuscripts" class="section">
+          <h2>科研工作</h2>
+          <p>
+            当前工作包括实验室验证、仿真分析，以及工程结果的结构化报告。
+          </p>
+          <ul>
+            <li>开关变换器环路分析</li>
+            <li>模型与硬件一致性校验</li>
+            <li>测量不确定度跟踪</li>
+            <li>设计迭代日志</li>
+          </ul>
+          <p>
+            视频与演示可参考
+            <a href="https://www.bilibili.com/" target="_blank" rel="noopener noreferrer">哔哩哔哩外部链接</a>。
+          </p>
+        </section>
+
+        <section id="informal" class="section">
+          <h2>非正式教学分享</h2>
+          <p>
+            这一部分收录面向同伴的非正式写作：简短指南、概念梳理和排障笔记。
+          </p>
+          <ul>
+            <li>仿真软件快速上手笔记</li>
+            <li>实验室搭建常见问题与修复</li>
+            <li>难点章节概念图谱</li>
+          </ul>
+        </section>
+      </div>
+    </div>
 
     <script src="scripts/main.js"></script>
   </body>

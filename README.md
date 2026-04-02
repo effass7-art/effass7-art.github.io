@@ -1,38 +1,23 @@
-﻿# Personal Site (Static)
+# 个人网站（静态，文档风格）
 
-当前版本聚焦科研风个人站，核心能力：
+这个版本是一个左侧栏文档风格个人主页的高相似度重制：
 
-- 首页仅保留两大主块：个人介绍、项目经历
-- 白色主调 + 黑色辅助的严谨视觉风格
-- 项目列表自动渲染（标题 + 简介）
-- 点击项目卡片进入详情页 `project.html?id=...`
-- 项目详情页包含侧边大纲目录（滚动高亮）
-- 项目详情页支持添加介绍视频链接（本地浏览器保存）
+- 固定深色侧边栏（`300px`）和目录链接
+- 浅色正文区域与长文分区
+- 滚动时目录高亮跟随
+- 移动端顶部按钮控制侧栏滑出
 
-## Local Preview
+## 本地预览
 
 ```bash
 cd personal-site
 python -m http.server 8080
 ```
 
-访问 `http://localhost:8080`
+打开 `http://localhost:8080`。
 
-## Content Customize
+## 主要文件
 
-1. 个人介绍内容在 `index.html` 内直接修改（姓名、学校、专业、研究方向、邮箱）。
-2. 个人形象图默认文件是 `assets/profile-placeholder.svg`，可直接替换为你的照片文件。
-3. 项目数据集中在 `scripts/main.js` 的 `PROJECTS` 数组中：
-   - `id`：项目标识（用于详情页链接）
-   - `title` / `summary`：首页展示
-   - `sections`：详情页正文与目录
-   - `videoUrl`：项目默认视频链接（可留空）
-4. 详情页的“保存视频”会把链接写入 `localStorage`，仅在当前浏览器生效。
-
-## Suggested Deployment
-
-上传整个目录到任意静态托管即可：
-
-- Vercel
-- Netlify
-- GitHub Pages
+- `index.html`：页面结构与分区内容
+- `styles/main.css`：样式体系与响应式布局
+- `scripts/main.js`：目录高亮、滚动监听、移动端菜单切换
